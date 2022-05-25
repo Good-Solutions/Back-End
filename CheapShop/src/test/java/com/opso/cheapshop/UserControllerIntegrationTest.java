@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
 
-@RunWith(SpringRunner.class)
 @SpringBootTest(classes = CheapshopApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class UserControllerIntegrationTest {
 

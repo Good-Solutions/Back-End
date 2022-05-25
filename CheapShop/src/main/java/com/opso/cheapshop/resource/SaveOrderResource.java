@@ -5,6 +5,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import com.opso.cheapshop.domain.model.Product;
+import com.opso.cheapshop.domain.model.User;
+
 import io.cucumber.java.eo.Se;
 import lombok.*;
 
@@ -29,7 +32,11 @@ public class SaveOrderResource {
     @Size(max=300)
     private String delivery_date;
 
+    
     @NotNull
-    private Long productId;
+    private User user_id;
+    
+    @NotNull
+    private Product product_id;
 
 }

@@ -1,10 +1,12 @@
 package com.opso.cheapshop.resource;
 
-import com.opso.cheapshop.domain.model.AuditModel;
+import java.sql.Timestamp;
+
+import com.opso.cheapshop.domain.model.Product;
+import com.opso.cheapshop.domain.model.User;
+
 import lombok.Getter;
 import lombok.Setter;
-
-import java.sql.Timestamp;
 
 @Getter
 @Setter
@@ -15,5 +17,8 @@ public class OrderResource {
     private String delivery_address;
     private String delivery_date;
     private int quantity;
+    
+    private Long userId;
+    private Long productId;
 
 }

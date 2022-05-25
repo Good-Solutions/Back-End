@@ -1,4 +1,4 @@
-package com.opso.cheapshop.domain.model;
+ package com.opso.cheapshop.domain.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -32,20 +32,22 @@ public class Product extends AuditModel{
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
+    
+    
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "supplier_id", nullable = false)
     private Supplier supplier;
 
     @NotNull
-    private String urlImage;
+    private String url_image;
     
     
     public String getUrlImage() {
-    	return urlImage;
+    	return url_image;
     }
     
     public Product setUrlImage(String urlImage) {
-        this.urlImage = urlImage;
+        this.url_image = urlImage;
         return this;
     }    
     
